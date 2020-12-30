@@ -1,12 +1,16 @@
 # manjaro-settings
 manjaro linux セッテイング備忘録
 
+# Caps キー　→　Ctrl
+.bashrcに以下を追記
+/usr/bin/setxkbmap -option "ctrl:nocaps"
+
 # 日本語入力パッケージインストール(fcitx-mozc)
 ```
 $ sudo pacman -S fcitx-mozc fcitx-gtk2 fcitx-gtk3 fcitx-qt5
 ```
 
-# .xprofileを作成して以下を入力
+## .xprofileを作成して以下を入力
 ```
 export LANG="ja_JP.UTF-8"
 export XMODIFIERS="@im=fcitx"
@@ -16,7 +20,7 @@ export QT_IM_MODULE=fcitx
 export DefaultIMModule=fcitx
 ```
 
-# .bashrcに以下を追記
+## .bashrcに以下を追記
 ```
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
